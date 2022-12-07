@@ -1,4 +1,4 @@
-package com.bughra.java.day08;
+package com.bughra.java.day08.subject;
 
 /*
  *  Declaration and use of methods in a class
@@ -31,12 +31,40 @@ package com.bughra.java.day08;
             3.2.2 Should we define a method with a return value?
                 ① Topic requirements
                 ② Based on experience: concrete analysis of specific issues
+
+       3.3 Method names: belong to identifiers, follow the rules and specifications of identifiers, "see the name and know the meaning"
+
+       3.4 Formal parameter list: A method can declare 0, 1, or more formal parameters.
+           3.4.1 Format: dataType1  formalParameter1, dataType2  formalParameter2,...
+
+           3.4.2 When we define a method, should we define formal parameters?
+           ① Topic requirements
+           ② Based on experience: concrete analysis of specific issues
+
+       3.5 Method body: the embodiment of the function of the method.
+
+       4. Use of the return keyword:
+         1. Scope of use: used in the method body
+         2. Function: ① End method
+                      ② For methods with return value types, use the "return data" method to return the desired data.
+         3. Points to note: the execution statement cannot be declared after the return keyword.
+
+      5.In the use of the method, you can call the properties or methods of the current class
+        Special: method A is called again in method A: recursive method.
+        In a method, methods cannot be defined.
+
  */
 public class CustomerTest {
     public static void main(String[] args) {
         Customer cust1 = new Customer();
 
         cust1.eat();
+
+        //The question of whether the test parameter needs to be set
+//        int[] arr = new int[]{3,4,5,2,5,63,2,5};
+//        cust1.sort(arr);
+
+        cust1.sleep(8);
     }
 }
 
@@ -57,6 +85,7 @@ class Customer{
 
     public void sleep(int hour){
         System.out.println("rested " + hour + " hour");
+        eat();
     }
 
     public String getName(){
@@ -70,5 +99,22 @@ class Customer{
     public String getNation(String nation){
         String info = "My nationality is: " + nation;
         return info;
+    }
+
+    //Experience the question of whether formal parameters need to be set
+//    public void sort(int[] arr){
+//
+//    }
+
+//    public void sort(int[] arr){
+//        int[] arr = new int[]{3,4,5,2,5,63,2,5};
+//    }
+
+    public void info(){
+
+          //Wrong
+//        public void swim(){
+//
+//        }
     }
 }

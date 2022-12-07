@@ -1,4 +1,4 @@
-package com.bughra.java.day08;
+package com.bughra.java.day08.subject;
 
 /*
  * Use of attributes in classes

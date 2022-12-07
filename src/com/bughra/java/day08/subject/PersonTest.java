@@ -1,4 +1,4 @@
-package com.bughra.java.day08;
+package com.bughra.java.day08.subject;
 
 /*
     1.The design class is actually a member of the design class
